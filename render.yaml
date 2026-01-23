@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: test-2-ssr
+    env: node
+    plan: free
+    rootDir: web
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 18
